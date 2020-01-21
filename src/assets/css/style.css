@@ -1,0 +1,98 @@
+@keyframes shine {
+    0% {
+        background-color: #333;
+    }
+    20% {
+        background-color: #111;
+    }
+    40% {
+        background-color: #555;
+    }
+    60% {
+        background-color: #777;
+    }
+    80% {
+        background-color: #222;
+    }
+    100% {
+        background-color: #333;
+    }
+}
+
+body {
+    height: 100%;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.app {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 15px auto;
+    position: relative;
+    width: 50vw;
+    top: 50%;
+}
+
+.img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blackout-box {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.results {
+    position: fixed;
+    left: 0;
+    margin: 15px;
+    top: 100px;
+}
+
+.box {
+    background: #333;
+    border: 2px solid #111;
+    box-sizing: border-box;
+    height: 10%;
+    width: 10%;
+    animation: shine 6s infinite;
+}
+
+.box-delay-1 {
+    animation-delay: 3s;
+}
+
+.box-delay-2 {
+    animation-delay: 2s;
+}
+
+.box-delay-3 {
+    animation-delay: 4s;
+}
+
+.is-hidden {
+    opacity: 0;
+}
+
+.input {
+    border: 1px solid #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    margin: 15px;
+    width: 300px;
+}
+
+.winner-box {
+    position: fixed;
+}
