@@ -41,6 +41,7 @@ body {
     object-fit: cover;
     width: 100%;
     max-height: calc(90vh - 30px);
+    border-radius: 30px;
 }
 
 .blackout-box {
@@ -51,20 +52,26 @@ body {
     width: 100%;
     top: 0;
     left: 0;
+    border-radius: 30px;
+    box-shadow: 0 0 22px 7px rgba(0, 0, 0, .16);
+    overflow: hidden;
 }
 
 .results {
     position: fixed;
-    bottom: -15px;
-    margin: 15px;
-    left: -15px;
-    width: 100%;
-    height: 10vh;
+    bottom: 10px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 7vh;
     background: #FBA601;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 10px;
+    box-shadow: 0 0 22px 7px rgba(0, 0, 0, .16);
+    border-radius: 30px;
 }
 
 .answer-box {
@@ -106,6 +113,8 @@ body {
     padding: 15px;
     margin: 15px;
     width: 300px;
+    box-shadow: 0 0 22px 7px rgba(0, 0, 0, .16);
+    border-radius: 30px;
 }
 
 .winner-box {
