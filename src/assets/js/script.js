@@ -5,6 +5,7 @@ const images = [
 ];
 
 let keys = [
+    'IMMER',
     'AUF',
     'DEM',
     'LAUFENDEN',
