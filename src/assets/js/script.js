@@ -106,10 +106,9 @@ const app = () => {
 
             if (keys.indexOf(value) !== -1) {
                 typedProperKeys.push(e.target.value);
-                const text = e.target.value.toUpperCase();
-                const answerBox = document.querySelector(`.answer-box[data-key="${text}"]`);
+                const answerBox = document.querySelector(`.answer-box[data-key="${value}"]`);
 
-                answerBox.innerHTML = text;
+                answerBox.innerHTML = value;
                 triesCount += 1;
                 removeElementFromKeys(value);
                 findRandomBoxes(10 * triesCount);
