@@ -110,8 +110,6 @@ const app = () => {
                 const answerBox = document.querySelector(`.answer-box[data-key="${text}"]`);
 
                 answerBox.innerHTML = text;
-                // resultsBoard.innerHTML = '';
-                // resultsBoard.appendChild(prepareList(typedProperKeys));
                 triesCount += 1;
                 removeElementFromKeys(value);
                 findRandomBoxes(10 * triesCount);
