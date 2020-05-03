@@ -1,20 +1,19 @@
 const appContainer = document.getElementById('app');
 
 const images = [
-  './assets/images/01.jpeg'
+  './assets/images/02.jpg'
 ];
 
 let keys = [
-    'FABRIK',
-    'ZENON',
-    'TURE',
-    'LOGISTIK',
-    'LOGISTIK',
-    'LOGISTIK',
-    'PRODUKT',
+    'AUF',
+    'DEM',
+    'LAUFENDEN',
+    'SEIN',
+    'UND',
+    'NUR',
+    'GUTE',
     'IDEEN',
-    'GARANTIE',
-    'EISINWINTER'
+    'HABEN'
 ];
 
 const winnerIs = [
@@ -106,8 +105,12 @@ const app = () => {
 
             if (keys.indexOf(value) !== -1) {
                 typedProperKeys.push(e.target.value);
-                resultsBoard.innerHTML = '';
-                resultsBoard.appendChild(prepareList(typedProperKeys));
+                const text = e.target.value.toUpperCase();
+                const answerBox = document.querySelector(`.answer-box[data-key="${text}"]`);
+
+                answerBox.innerHTML = text;
+                // resultsBoard.innerHTML = '';
+                // resultsBoard.appendChild(prepareList(typedProperKeys));
                 triesCount += 1;
                 removeElementFromKeys(value);
                 findRandomBoxes(10 * triesCount);
@@ -135,9 +138,22 @@ const app = () => {
         appContainer.appendChild(input);
     };
 
+    const createPlacesForAnswers = () => {
+        for (let key in keys) {
+            const box = document.createElement('div');
+            box.classList.add('answer-box');
+            box.dataset.key = keys[key];
+            box.style.width = (keys[key].length * 20) + 'px';
+
+            resultsBoard.appendChild(box);
+        }
+    };
+
     const createResultsBoard = () => {
         resultsBoard = document.createElement('div');
         resultsBoard.classList.add('results');
+
+        createPlacesForAnswers();
 
         appContainer.appendChild(resultsBoard);
     };

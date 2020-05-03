@@ -31,7 +31,8 @@ body {
     justify-content: center;
     margin: 15px auto;
     position: relative;
-    width: 50vw;
+    width: 450px;
+    max-height: 90vh;
     top: 50%;
 }
 
@@ -39,6 +40,7 @@ body {
     height: auto;
     object-fit: cover;
     width: 100%;
+    max-height: calc(90vh - 30px);
 }
 
 .blackout-box {
@@ -53,9 +55,22 @@ body {
 
 .results {
     position: fixed;
-    left: 0;
+    bottom: -15px;
     margin: 15px;
-    top: 100px;
+    left: -15px;
+    width: 100%;
+    height: 10vh;
+    background: #FBA601;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.answer-box {
+    border-bottom: 2px solid;
+    margin: 0 10px;
+    text-align: center;
 }
 
 .box {
